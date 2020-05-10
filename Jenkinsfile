@@ -4,8 +4,7 @@ pipeline {
         string (
              defaultValue:'*',
             description:'',
-            name:'BRANCH_PATTERN')
-       booleanParam (
+            booleanParam (
             defaultValue: false,
             description:'',
             name : 'FORCE_FULL_BUILD')
@@ -15,7 +14,7 @@ pipeline {
                 steps {
                     echo 'Preparing..'
                     checkout([$class:'GitSCM',
-                        branches:[[name: "origin/${BRANCH_PATTERN}"]],
+                        branches:[[name: "origin/master"]],
                          doGenerateSubmoduleConfigurations: false,
                           extensions: [[$class: 'LocalBranch']],
                            submoduleCfg: [],

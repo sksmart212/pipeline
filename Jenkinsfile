@@ -30,7 +30,7 @@ pipeline {
 
                 steps {
                     echo 'Building..'
-                    build 'DevProject'
+                     build job: 'DevProject'
                       }
             }
         stage('Test') {

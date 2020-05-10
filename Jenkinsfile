@@ -28,10 +28,10 @@ pipeline {
 
          stage('Build')  {
 
-                        steps {
-                                     echo 'Building..'
-                                     build job: 'DevProject'
-                          }
+                steps {
+                    echo 'Building..'
+                      }
+            }
         stage('Test') {
             steps {
                 echo 'Testing..'
